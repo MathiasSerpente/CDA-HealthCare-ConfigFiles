@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "Patient Microservice"
+    description: "HealthCare Application - MS Patient"
+    version: "1.0.0"
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3308/patientdb
+    username: root
+    password: azerty
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
