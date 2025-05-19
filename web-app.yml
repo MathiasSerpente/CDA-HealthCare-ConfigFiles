@@ -28,12 +28,6 @@ eureka:
       defaultZone: http://eurekaserver:8070/eureka/
 
 spring:
-  cloud:
-    fail-fast: true
-    retry:
-      enabled: false
-    config:
-      override-none: true
   profiles:
     active: default
   thymeleaf:
