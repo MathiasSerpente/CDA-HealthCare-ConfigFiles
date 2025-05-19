@@ -25,11 +25,9 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://eurekaserver:8070/eureka/}
 
 spring:
-  profiles:
-    active: default
   datasource:
     url: jdbc:mysql://patientdb:3306/patientdb
     username: root
