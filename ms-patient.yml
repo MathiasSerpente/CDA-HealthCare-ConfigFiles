@@ -20,12 +20,12 @@ info:
 
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://eurekaserver:8070/eureka/
 
 spring:
   datasource:
