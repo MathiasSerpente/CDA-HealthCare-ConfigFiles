@@ -1,0 +1,38 @@
+server:
+  port: 8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "Note Microservice"
+    description: "HealthCare Application - MS Note"
+    version: "1.0.0"
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://eurekaserver:8070/eureka/}
+
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: notedb
+      username: root
+      password: 123
+      authentication-database: admin
