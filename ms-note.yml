@@ -26,3 +26,14 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://eurekaserver:8070/eureka/}
+
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: notedb
+      username: root
+      password: 123
+      authentication-database: admin
+      authentication-mechanism: SCRAM-SHA-256
