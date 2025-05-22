@@ -36,3 +36,4 @@ spring:
       username: root
       password: 123
       authentication-database: admin
+      authentication-mechanism: SCRAM-SHA-256
