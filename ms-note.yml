@@ -30,10 +30,4 @@ eureka:
 spring:
   data:
     mongodb:
-      host: mongodb
-      port: 27017
-      database: notedb
-      username: root
-      password: 123
-      authentication-database: admin
-      authentication-mechanism: SCRAM-SHA-256
+      uri: mongodb://root:123@mongodb:27017/notedb?authSource=admin&authMechanism=SCRAM-SHA-256
