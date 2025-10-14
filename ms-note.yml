@@ -29,5 +29,4 @@ eureka:
 
 spring:
   data:
-    mongodb:
-      uri: mongodb://root:123@mongodb:27017/notedb?authSource=admin&authMechanism=SCRAM-SHA-256
+    mongodb: {}
