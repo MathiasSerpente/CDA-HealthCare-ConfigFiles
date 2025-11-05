@@ -25,13 +25,11 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-     defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8070/eureka/}
-      #defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://eurekaserver:8070/eureka/}
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://eurekaserver:8070/eureka/}
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3308/patientdb
-    #url: jdbc:mysql://patientdb:3306/patientdb
+    url: jdbc:mysql://patientdb:3306/patientdb
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
